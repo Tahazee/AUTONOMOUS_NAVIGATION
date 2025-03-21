@@ -51,31 +51,31 @@ To install all required dependencies, run:
 
 ```bash
 
-`sudo apt update
-sudo apt install ros-humble-slam-toolbox ros-humble-navigation2 ros-humble-robot-state-publisher` 
+sudo apt update
+sudo apt install ros-humble-slam-toolbox ros-humble-navigation2 ros-humble-robot-state-publisher
 ```
 Additionally, install any Python dependencies (if applicable):
 
 ```bash
-`pip install -r requirements.txt` 
+pip install -r requirements.txt 
 ```
 ### 4. Build the Workspace
 
 If you have a ROS2 workspace, build the workspace to compile the URDF model and ROS2 packages:
 
 ```bash
-`colcon build --symlink-install` 
+colcon build --symlink-install
 ```
 Source the ROS2 workspace:
 ```bash
-`source install/setup.bash` 
+source install/setup.bash
 ```
 ### 5. Launch the System
 
 To launch the system, run the following ROS2 launch command:
 
 ```bash
-`ros2 launch BOTX main.launch.py` 
+ros2 launch BOTX main.launch.py
 ```
 This will bring up the robot model, sensors, and navigation stack. You can use RViz to visualize the robot's sensor data and its navigation path.
 
@@ -84,7 +84,7 @@ This will bring up the robot model, sensors, and navigation stack. You can use R
 You can also run the robot in a simulated environment such as Gazebo for testing and development purposes. To launch the robot in Gazebo, run:
 
 ```bash
-`ros2 launch BOTX launch_sim.launch.py` 
+ros2 launch BOTX launch_sim.launch.py
 ```
 ## Usage
 
@@ -109,7 +109,7 @@ To teleoperate the robot:
 
 ```bash
 
-`ros2 run teleop_twist_keyboard teleop_twist_keyboard` 
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 ### Customizing the Robot
 
@@ -118,7 +118,7 @@ The robot's URDF model can be customized for different sensors, actuators, or ad
 ## Project Structure
 
 ```bash
-`BOTX/
+BOTX/
 ├── CMakeLists.txt
 ├── config
 │   ├── diff_drive.rviz
