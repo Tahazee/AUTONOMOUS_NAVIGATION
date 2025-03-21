@@ -1,0 +1,9 @@
+/home/teez/ws/build/BOTX/CMakeFiles/uninstall.dir
+/home/teez/ws/build/BOTX/CMakeFiles/BOTX_uninstall.dir
+/home/teez/ws/build/BOTX/CMakeFiles/test.dir
+/home/teez/ws/build/BOTX/CMakeFiles/edit_cache.dir
+/home/teez/ws/build/BOTX/CMakeFiles/rebuild_cache.dir
+/home/teez/ws/build/BOTX/CMakeFiles/list_install_components.dir
+/home/teez/ws/build/BOTX/CMakeFiles/install.dir
+/home/teez/ws/build/BOTX/CMakeFiles/install/local.dir
+/home/teez/ws/build/BOTX/CMakeFiles/install/strip.dir

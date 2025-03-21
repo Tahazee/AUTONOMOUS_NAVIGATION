@@ -1,0 +1,75 @@
+[0.019s] Invoking command in '/home/teez/ws/build/BOTX': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/teez/ws/src/BOTX -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/teez/ws/install/BOTX
+[0.118s] -- The C compiler identification is GNU 11.4.0
+[0.211s] -- The CXX compiler identification is GNU 11.4.0
+[0.222s] -- Detecting C compiler ABI info
+[0.320s] -- Detecting C compiler ABI info - done
+[0.335s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.336s] -- Detecting C compile features
+[0.337s] -- Detecting C compile features - done
+[0.342s] -- Detecting CXX compiler ABI info
+[0.484s] -- Detecting CXX compiler ABI info - done
+[0.500s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.500s] -- Detecting CXX compile features
+[0.501s] -- Detecting CXX compile features - done
+[0.508s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.094s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.197s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.241s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.349s] WARNING: Package name "BOTX" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[1.399s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.414s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.417s] -- Added test 'lint_cmake' to check CMake code style
+[1.418s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.427s] -- Added test 'xmllint' to check XML markup files
+[1.429s] -- Configuring done
+[1.435s] -- Generating done
+[1.439s] -- Build files have been written to: /home/teez/ws/build/BOTX
+[1.445s] Invoked command in '/home/teez/ws/build/BOTX' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/teez/ws/src/BOTX -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/teez/ws/install/BOTX
+[1.447s] Invoking command in '/home/teez/ws/build/BOTX': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/teez/ws/build/BOTX -- -j8 -l8
+[1.509s] Invoked command in '/home/teez/ws/build/BOTX' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/teez/ws/build/BOTX -- -j8 -l8
+[1.527s] Invoking command in '/home/teez/ws/build/BOTX': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/teez/ws/build/BOTX
+[1.539s] -- Install configuration: ""
+[1.540s] -- Execute custom install script
+[1.541s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/config/diff_drive.rviz
+[1.556s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/config/empty.yaml
+[1.570s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/config/final_nav.rviz
+[1.587s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/config/mapper_params_online_async.yaml
+[1.604s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/config/my_controllers.yaml
+[1.620s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/config/nav.rviz
+[1.637s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/config/peaksimulation.rviz
+[1.651s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/config/twist_mux.yaml
+[1.666s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/config/view_bot.rviz
+[1.681s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/description/camera.xacro
+[1.695s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/description/depth.xacro
+[1.709s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/description/gazebo_control.xacro
+[1.724s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/description/inertial_macros.xacro
+[1.737s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/description/lidar.xacro
+[1.748s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/description/robot.urdf.xacro
+[1.762s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/description/robot_core.xacro
+[1.774s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/description/ros2_control.xacro
+[1.786s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/launch/__pycache__/launch_sim.launch.cpython-310.pyc
+[1.798s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/launch/__pycache__/rsp.launch.cpython-310.pyc
+[1.811s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/launch/launch_sim.launch.py
+[1.824s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/launch/main.launch.py
+[1.838s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/launch/rsp.launch.py
+[1.853s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/worlds/empty.world
+[1.866s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/worlds/house.world
+[1.878s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/worlds/obs.world
+[1.890s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/worlds/obs2.world
+[1.902s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/worlds/wall.world
+[1.914s] -- Symlinking: /home/teez/ws/install/BOTX/share/ament_index/resource_index/package_run_dependencies/BOTX
+[1.929s] -- Symlinking: /home/teez/ws/install/BOTX/share/ament_index/resource_index/parent_prefix_path/BOTX
+[1.943s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/environment/ament_prefix_path.sh
+[1.958s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/environment/ament_prefix_path.dsv
+[1.971s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/environment/path.sh
+[1.982s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/environment/path.dsv
+[1.995s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/local_setup.bash
+[2.007s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/local_setup.sh
+[2.019s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/local_setup.zsh
+[2.030s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/local_setup.dsv
+[2.044s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/package.dsv
+[2.058s] -- Symlinking: /home/teez/ws/install/BOTX/share/ament_index/resource_index/packages/BOTX
+[2.071s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/cmake/BOTXConfig.cmake
+[2.083s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/cmake/BOTXConfig-version.cmake
+[2.095s] -- Symlinking: /home/teez/ws/install/BOTX/share/BOTX/package.xml
+[2.111s] Invoked command in '/home/teez/ws/build/BOTX' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/teez/ws/build/BOTX

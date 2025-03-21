@@ -1,0 +1,4 @@
+source;share/BOTX/local_setup.bash
+source;share/BOTX/local_setup.dsv
+source;share/BOTX/local_setup.sh
+source;share/BOTX/local_setup.zsh
