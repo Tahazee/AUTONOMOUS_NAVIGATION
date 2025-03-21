@@ -41,125 +41,165 @@ To run the **BOTX** system, ensure the following dependencies are installed:
 
 
 
-> Written w-   **Nav2 Stack**: Install via  `apt`  or build from source.
-    
-    bash
-    
-    Copy
-    
-    sudo apt install ros-humble-nav2-bringup
-    
--   **Gazebo**  (Optional): For simulation purposes.
-    
-    bash
-    
-    Copy
-    
-    sudo apt install ros-humble-gazebo-ros-pkgs
-    
+### Setup ROS2 Environment
 
-## Installation
+Ensure you have ROS2 installed. For installation instructions, refer to the ROS2 installation guide.
 
-1.  **Clone the Repository**:
-    
-    bash
-    
-    Copy
-    
-    git clone https://github.com/your-username/autonomous-navigation-botx.git
-    cd autonomous-navigation-botx
-    
-2.  **Build the Workspace**:
-    
-    bash
-    
-    Copy
-    
-    colcon build
-    source install/setup.bash
-    
-3.  **Install Dependencies**:
-    
-    bash
-    
-    Copy
-    
-    rosdep install --from-paths src --ignore-src -r -y
-    
+### 3. Install Dependencies
+
+To install all required dependencies, run:
+
+bash
+
+CopyEdit
+
+`sudo apt update
+sudo apt install ros-humble-slam-toolbox ros-humble-navigation2 ros-humble-robot-state-publisher` 
+
+Additionally, install any Python dependencies (if applicable):
+
+bash
+
+CopyEdit
+
+`pip install -r requirements.txt` 
+
+### 4. Build the Workspace
+
+If you have a ROS2 workspace, build the workspace to compile the URDF model and ROS2 packages:
+
+bash
+
+CopyEdit
+
+`colcon build --symlink-install` 
+
+Source the ROS2 workspace:
+
+bash
+
+CopyEdit
+
+`source install/setup.bash` 
+
+### 5. Launch the System
+
+To launch the system, run the following ROS2 launch command:
+
+bash
+
+CopyEdit
+
+`ros2 launch BOTX main.launch.py` 
+
+This will bring up the robot model, sensors, and navigation stack. You can use RViz to visualize the robot's sensor data and its navigation path.
+
+### 6. Run the Robot in Simulation (Optional)
+
+You can also run the robot in a simulated environment such as Gazebo for testing and development purposes. To launch the robot in Gazebo, run:
+
+bash
+
+CopyEdit
+
+`ros2 launch BOTX launch_sim.launch.py` 
 
 ## Usage
 
-### Running SLAM
-
-To start SLAM and create a map of the environment:
-
-bash
-
-Copy
-
-ros2 launch botx_navigation slam_launch.py
-
 ### Autonomous Navigation
 
-Once the map is created, you can start autonomous navigation:
+Once the system is up and running, the robot will perform autonomous navigation tasks using the **Nav2 stack** for path planning, local and global navigation, and obstacle avoidance.
+
+-   The **LiDAR** sensor provides distance measurements and environmental data for SLAM and mapping.
+-   The **depth camera** and **RGB camera** offer visual data for object detection, localization, and mapping.
+-   **SLAMToolbox** uses sensor data to build and update the map in real-time.
+
+The robot autonomously plans its path based on the environment and performs collision avoidance in dynamic environments.
+
+### Controlling the Robot
+
+You can interact with the robot using various ROS2 tools:
+
+-   **RViz**: Visualize the robot's sensors, path planning, and SLAM data.
+-   **Teleoperation**: Use `teleop_twist_keyboard` or another teleoperation package to manually control the robot.
+
+To teleoperate the robot:
 
 bash
 
-Copy
+CopyEdit
 
-ros2 launch botx_navigation navigation_launch.py
+`ros2 run teleop_twist_keyboard teleop_twist_keyboard` 
 
-### Simulation (Optional)
+### Customizing the Robot
 
-If you want to test BotX in a simulated environment using Gazebo:
+The robot's URDF model can be customized for different sensors, actuators, or additional hardware. You can modify the URDF file and recompile the system to suit your needs.
+
+## Project Structure
 
 bash
 
-Copy
+CopyEdit
 
-ros2 launch botx_gazebo gazebo_launch.py
+`BOTX/
+├── CMakeLists.txt
+├── config
+│   ├── diff_drive.rviz
+│   ├── empty.yaml
+│   ├── final_nav.rviz
+│   ├── mapper_params_online_async.yaml
+│   ├── my_controllers.yaml
+│   ├── nav.rviz
+│   ├── peaksimulation.rviz
+│   ├── twist_mux.yaml
+│   └── view_bot.rviz
+├── description
+│   ├── camera.xacro
+│   ├── depth.xacro
+│   ├── gazebo_control.xacro
+│   ├── inertial_macros.xacro
+│   ├── lidar.xacro
+│   ├── robot_core.xacro
+│   ├── robot.urdf.xacro
+│   └── ros2_control.xacro
+├── launch
+│   ├── launch_sim.launch.py
+│   ├── main.launch.py
+│   ├── __pycache__
+│   │   ├── launch_sim.launch.cpython-310.pyc
+│   │   └── rsp.launch.cpython-310.pyc
+│   └── rsp.launch.py
+├── LICENSE.md
+├── package.xml
+├── README.md
+└── worlds
+    ├── empty.world
+    ├── house.world
+    ├── obs2.world
+    ├── obs.world
+    └── wall.world
 
-## Configuration
-
-The configuration files for SLAM and Nav2 are located in the  `config`  directory. You can modify parameters such as:
-
--   **Map resolution**
-    
--   **Robot footprint**
-    
--   **Costmap parameters**
-    
--   **Planner settings**
-    
-
-Refer to the  [Nav2 documentation](https://navigation.ros.org/)  for detailed information on configuration options.
+` 
 
 ## Contributing
 
-We welcome contributions to the BotX Autonomous Navigation project! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+Contributions to **BOTX** are welcome! To contribute:
 
 1.  Fork the repository.
-    
-2.  Create a new branch (`git checkout -b feature/YourFeatureName`).
-    
-3.  Commit your changes (`git commit -m 'Add some feature'`).
-    
-4.  Push to the branch (`git push origin feature/YourFeatureName`).
-    
-5.  Open a pull request.
-    
+2.  Create a new branch (`git checkout -b feature-branch`).
+3.  Make your changes and commit them (`git commit -am 'Add new feature'`).
+4.  Push to your forked repository (`git push origin feature-branch`).
+5.  Submit a pull request.
 
-## License
 
-This project is licensed under the  **MIT License**. See the  [LICENSE](https://license/)  file for details.
 
-## Acknowledgments
+## Acknowledgements
 
--   **ROS2 Community**: For providing an excellent framework for robotics development.
-    
--   **SLAM Toolbox Developers**: For their robust SLAM implementation.
-    
--   **Nav2 Team**: For their comprehensive navigation stack.
+-   **ROS2**: For providing the platform for developing robotic systems.
+-   **SLAMToolbox**: For real-time SLAM and mapping.
+-   **Nav2**: For autonomous navigation and path planning.
+-   **Gazebo**: For simulation of robot dynamics and sensor integration.
+-   **OpenCV** and **PCL**: For computer vision and point cloud processing.
     
 -   **Gazebo**: For providing a powerful simulation environment.
     
