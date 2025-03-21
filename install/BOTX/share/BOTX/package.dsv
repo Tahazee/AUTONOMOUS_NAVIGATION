@@ -1,8 +1,0 @@
-source;share/BOTX/hook/cmake_prefix_path.ps1
-source;share/BOTX/hook/cmake_prefix_path.dsv
-source;share/BOTX/hook/cmake_prefix_path.sh
-source;share/BOTX/local_setup.bash
-source;share/BOTX/local_setup.dsv
-source;share/BOTX/local_setup.ps1
-source;share/BOTX/local_setup.sh
-source;share/BOTX/local_setup.zsh

@@ -1,1 +1,0 @@
-/home/teez/ws/src/BOTX/launch/launch_sim.launch.py
